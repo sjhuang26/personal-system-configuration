@@ -547,6 +547,8 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  (setq org-cycle-include-plain-lists 'integrate)
+
   (setq helm-display-function 'helm-display-buffer-in-own-frame
                                   helm-display-buffer-reuse-frame t
                                   helm-use-undecorated-frame-option t)
