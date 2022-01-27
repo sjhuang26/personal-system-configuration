@@ -243,10 +243,10 @@ It should only modify the values of Spacemacs settings."
    ;; Default font or prioritized list of fonts. The `:size' can be specified as
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
-   dotspacemacs-default-font '("Source Code Pro"
+   dotspacemacs-default-font '("JetBrains Mono"
                                :size 10.0
                                :weight normal
-                               :width normal)
+                               :width condensed)
 
    ;; The leader key (default "SPC")
    dotspacemacs-leader-key "SPC"
@@ -529,7 +529,9 @@ See the header of this file for more information."
 This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
-If you are unsure, try setting them in `dotspacemacs/user-config' first.")
+If you are unsure, try setting them in `dotspacemacs/user-config' first."
+  (setq custom-safe-themes t)
+  )
 
 
 (defun dotspacemacs/user-load ()
@@ -593,9 +595,17 @@ before packages are loaded."
   (define-minor-mode review-mode
     "Hide lines by pushing 5."
     :lighter " Review"
-    :keymap `(
-	            (,(kbd "5") . review-mode-hide)
-	            (,(kbd "8") . review-mode-show-to-asterisk)))
+;;    :keymap `(
+;;	            (,(kbd "5") . review-mode-hide)
+	;;            (,(kbd "8") . review-mode-show-to-asterisk)))
+    )
+  (spacemacs/declare-prefix-for-minor-mode 'review-mode "r" "review mode")
+  (spacemacs|define-transient-state review-mode
+    :title "Review mode transient state"
+    :doc "[5] show next line [8] show next asterisk [q] quit"
+    :foreign-keys run
+    :bindings ("5" review-mode-hide) ("8" review-mode-show-to-asterisk) ("q" nil :exit t))
+  (spacemacs/set-leader-keys-for-minor-mode 'review-mode "." 'spacemacs/review-mode-transient-state/body)
 
   (setq review-text-highlights '(
 			                           ("\#.*\n" . 'header-line)
