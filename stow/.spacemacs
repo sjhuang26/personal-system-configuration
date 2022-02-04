@@ -54,7 +54,7 @@ This function should only modify configuration layer settings."
      ;;        shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
-     themes-megapack
+     ;;themes-megapack
      ;; version-control
      treemacs)
 
@@ -67,7 +67,7 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(adaptive-wrap org-autolist)
+   dotspacemacs-additional-packages '(adaptive-wrap org-autolist modus-themes)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -547,6 +547,9 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  (setq browse-url-browser-function 'browse-url-generic
+        browse-url-generic-program "opera")
+
   (setq org-cycle-include-plain-lists 'integrate)
   (add-hook 'org-mode-hook 'org-autolist-mode)
 
@@ -621,6 +624,15 @@ before packages are loaded."
 
   (add-hook 'review-text-mode-hook 'review-mode)
   (add-hook 'review-text-mode-hook 'visual-line-mode)
+
+  (add-hook 'org-mode-hook 'review-mode)
+  (add-hook 'org-mode-hook 'visual-line-mode)
+  (add-hook 'org-mode-hook 'my-org-mode-set-variables)
+
+  (defun my-org-mode-set-variables ()
+    (setq tab-width 8)
+    (setq indent-tabs-mode t)
+    )
 
 ;;  (setq exwm-layout-show-all-buffers nil)
 ;;(exwm-input-set-key (kbd "s-1")
