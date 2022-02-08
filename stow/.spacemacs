@@ -43,7 +43,7 @@ This function should only modify configuration layer settings."
      ;; better-defaults
      ;;exwm
      emacs-lisp
-     ;; git
+     git
      helm
      ;; lsp
      ;; markdown
