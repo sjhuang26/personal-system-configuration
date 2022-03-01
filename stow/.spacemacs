@@ -45,6 +45,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      helm
+     latex
      ;; lsp
      ;; markdown
      multiple-cursors
@@ -225,7 +226,8 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-light
+   dotspacemacs-themes '(modus-operandi
+                         spacemacs-light
                          spacemacs-dark)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
@@ -531,7 +533,6 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
-  (setq custom-safe-themes t)
   )
 
 
@@ -563,7 +564,7 @@ before packages are loaded."
     "Set font to a variable width (proportional) fonts in current buffer"
     (interactive)
     (setq tab-width 6) ;; Constantia has a really small space width
-    (setq buffer-face-mode-face '(:family "Constantia"))
+    (setq buffer-face-mode-face '(:family "Mignon" :weight regular))
     (buffer-face-mode)
     (diminish 'buffer-face-mode))
 
@@ -634,6 +635,8 @@ before packages are loaded."
     (setq tab-width 8)
     (setq indent-tabs-mode t)
     )
+  (setq vc-follow-symlinks t)
+
 
 ;;  (setq exwm-layout-show-all-buffers nil)
 ;;(exwm-input-set-key (kbd "s-1")
@@ -674,7 +677,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(modus-operandi spacemacs-light))
+ ;;'(custom-enabled-themes '(modus-operandi spacemacs-light))
  '(custom-safe-themes
    '("5d6cc3e22172f051d68c0c95d79f3dff0e800f2d107f6f6b9220ed5380285c50" "2420401709d448e5999b76005aece99fa3d27e17a6d2312b40636655f0efbc6f" "9f1d0627e756e58e0263fe3f00b16d8f7b2aca0882faacdc20ddd56a95acb7c2" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "fc6697788f00629cd01f4d2cc23f1994d08edb3535e4c0facef6b7247b41f5c7" "00445e6f15d31e9afaa23ed0d765850e9cd5e929be5e8e63b114a3346236c44c" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "0edb121fdd0d3b18d527f64d3e2b57725acb152187eea9826d921736bd6e409e" default))
  '(evil-want-Y-yank-to-eol nil)
