@@ -20,5 +20,9 @@ function maintain_my_computer
             and read_confirm
             and git commit -m w
             and git push
+        case bc
+            bluetoothctl connect 00:02:5B:04:7B:30
+        case bd
+            bluetoothctl disconnect 00:02:5B:04:7B:30
     end
 end
