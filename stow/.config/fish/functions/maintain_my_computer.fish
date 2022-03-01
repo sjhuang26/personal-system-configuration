@@ -24,5 +24,12 @@ function maintain_my_computer
             bluetoothctl connect 00:02:5B:04:7B:30
         case bd
             bluetoothctl disconnect 00:02:5B:04:7B:30
+        case of
+            # opera font fix
+            set opera_fontconfig (find ~/snap/opera -name 'fontconfig')
+            and echo 'These directories will be removed'
+            and echo $opera_fontconfig
+            and read_confirm
+            and rm -vIr $opera_fontconfig
     end
 end
