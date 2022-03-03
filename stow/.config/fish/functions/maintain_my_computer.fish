@@ -36,12 +36,14 @@ function maintain_my_computer
         case b
             rclone mount b:/ ~/b --vfs-cache-mode minimal &
         case gs
-            rclone sync g:/ ~/cloud/g-sjhuang26/
+            rclone sync -i g:/ ~/cloud/g-sjhuang26/
         case gu
             umount ~/g
         case bu
             umount ~/b
         case bupi
             bup -d ~/b/sjhuang26-main/bup/ index ~/cloud/
+        case gdedup
+            rclone dedupe g:/
     end
 end
