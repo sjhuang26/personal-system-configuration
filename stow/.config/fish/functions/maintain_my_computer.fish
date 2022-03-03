@@ -31,5 +31,17 @@ function maintain_my_computer
             and echo $opera_fontconfig
             and read_confirm
             and rm -vIr $opera_fontconfig
+        case g
+            rclone mount g:/ ~/g &
+        case b
+            rclone mount b:/ ~/b --vfs-cache-mode minimal &
+        case gs
+            rclone sync g:/ ~/cloud/g-sjhuang26/
+        case gu
+            umount ~/g
+        case bu
+            umount ~/b
+        case bupi
+            bup -d ~/b/sjhuang26-main/bup/ index ~/cloud/
     end
 end
