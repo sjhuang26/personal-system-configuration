@@ -75,7 +75,7 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(adaptive-wrap org-autolist modus-themes smudge)
+   dotspacemacs-additional-packages '(adaptive-wrap org-autolist modus-themes smudge tern)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -576,6 +576,10 @@ before packages are loaded."
       map))
   (define-key global-map (kbd "C-c .") my-smudge-command-map)
 
+  ;; https://emacs.stackexchange.com/questions/12210/helm-entries-run-off-right-edge
+  (add-hook 'helm-after-initialize-hook (lambda ()
+                                          (with-helm-buffer
+                                            (visual-line-mode))))
 
 
   (setq browse-url-browser-function 'browse-url-generic
@@ -584,9 +588,9 @@ before packages are loaded."
   (setq org-cycle-include-plain-lists 'integrate)
   (add-hook 'org-mode-hook 'org-autolist-mode)
 
-  (setq helm-display-function 'helm-display-buffer-in-own-frame
-                                  helm-display-buffer-reuse-frame t
-                                  helm-use-undecorated-frame-option t)
+  ;;(setq helm-display-function 'helm-display-buffer-in-own-frame
+  ;;                                helm-display-buffer-reuse-frame t
+   ;;                               helm-use-undecorated-frame-option t)
   ;; https://emacs.stackexchange.com/questions/3038/using-a-different-font-for-each-major-mode
   ;; Use variable width font faces in current buffer
   (defun my-buffer-face-mode-variable ()

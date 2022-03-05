@@ -45,5 +45,9 @@ function maintain_my_computer
             bup -d ~/b/sjhuang26-main/bup/ index ~/cloud/
         case gdedup
             rclone dedupe g:/
+        case pk
+            pkill steam
+            pkill itch
+            pkill zoom
     end
 end
