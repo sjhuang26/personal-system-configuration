@@ -49,5 +49,11 @@ function maintain_my_computer
             pkill steam
             pkill itch
             pkill zoom
+        case bupindex
+            bup -d ~/b/sjhuang26-main/bup/ index ~/cloud/ -vv
+        case bupsave
+            bup -d ~/b/sjhuang26-main/bup/ save ~/cloud/ -n sjhuang26-main -vv
+        case src
+            functions maintain_my_computer
     end
 end
