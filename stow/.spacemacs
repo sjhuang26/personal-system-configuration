@@ -600,7 +600,7 @@ before packages are loaded."
     "Set font to a variable width (proportional) fonts in current buffer"
     (interactive)
     (setq tab-width 6) ;; Constantia has a really small space width
-    (setq buffer-face-mode-face '(:family "Mignon" :weight regular))
+    (setq buffer-face-mode-face '(:family "Mignon" :weight regular :height 2.0))
     (buffer-face-mode)
     (diminish 'buffer-face-mode))
 
