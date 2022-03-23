@@ -49,5 +49,29 @@ function maintain_my_computer
             pkill steam
             pkill itch
             pkill zoom
+        case setup_everything
+            echo 'This is only intended for use for new computers.'
+            echo 'Do not run it directly. Copy and paste each line.'
+            return
+
+            read_confirm
+            and git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+            and git config --global user.name "Suhao Jeffrey Huang"
+            and git config --global user.email "sjhuang26@gmail.com"
+            and mv ~/.config/lxqt/ ~/.config/lxqt~original/
+            and mv ~/.config/qterminal.org ~/.config/qterminal.org~original/
+            and mv ~/.emacs.d/ ~/.emacs.d~original/
+            and mkdir ~/r/
+            and cd ~/r/
+            and git clone git@github.com:sjhuang26/personal_notes
+            and git clone git@github.com:sjhuang26/personal-system-configuration
+            and curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+            and curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
+            and echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+            and sudo apt install stow spotify-client
+            and sudo snap install emacs opera
+            and sudo chmod a+wr /usr/bin/spotify
+            and sudo chmod a+wr /usr/share/spotify
+            and sudo chmod a+wr /usr/share/spotify/Apps -R
     end
 end
