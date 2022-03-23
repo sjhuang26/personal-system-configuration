@@ -73,5 +73,11 @@ function maintain_my_computer
             and sudo chmod a+wr /usr/bin/spotify
             and sudo chmod a+wr /usr/share/spotify
             and sudo chmod a+wr /usr/share/spotify/Apps -R
+        case bupindex
+            bup -d ~/b/sjhuang26-main/bup/ index ~/cloud/ -vv
+        case bupsave
+            bup -d ~/b/sjhuang26-main/bup/ save ~/cloud/ -n sjhuang26-main -vv
+        case src
+            functions maintain_my_computer
     end
 end
