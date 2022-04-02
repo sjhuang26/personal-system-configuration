@@ -1,0 +1,5 @@
+(("default"   . ((user-emacs-directory   . "~/.my-dotfiles/default-emacs")))
+ ("doom"      . ((user-emacs-directory   . "~/.my-dotfiles/doom-emacs")
+                 (env . (("DOOMDIR"      . "~/.my-dotfiles/doom.d")))))
+ ("spacemacs" . ((user-emacs-directory   . "~/.my-dotfiles/spacemacs")
+                 (env . (("SPACEMACSDIR" . "~/.my-dotfiles/spacemacs.d"))))))
