@@ -32,7 +32,10 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'modus-operandi
+      doom-font (font-spec :family "JetBrainsMono" :size 15 :weight 'light)
+      doom-variable-pitch-font (font-spec :family "Mignon" :size 18 :weight 'light))
+      ;;(load-theme 'modus-operandi)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -74,3 +77,57 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+(add-hook 'org-mode-hook (lambda () (org-autolist-mode)))
+(setq evil-escape-key-sequence "fd")
+;; https://stackoverflow.com/questions/23677844/emacs-how-to-show-only-the-lines-on-or-before-the-cursor-in-a-file
+  (defun review-mode-hide-lines ()
+    "Helper for review mode that hides lines."
+    (interactive)
+    (widen)
+    (call-interactively 'move-end-of-line)
+    (forward-char)
+    (call-interactively 'move-end-of-line)
+    (narrow-to-region 1 (point)))
+
+  (defun review-mode-show-to-asterisk ()
+    "Show lines until a line beginning with an asterisk is reached."
+    (interactive)
+    (widen)
+    (catch 'loop (while (not (eobp))
+                   (forward-line 1)
+                   (when (string-match "\*.*" (thing-at-point 'line)) (throw 'loop t))))
+    (forward-line 1)
+    (narrow-to-region 1 (point)))
+
+;; aka. define-transient-command
+(after! transient
+(transient-define-prefix review-mode-begin-display ()
+  "Review Mode Display"
+  :transient-suffix 'transient--do-stay
+  :transient-non-suffix 'transient--do-stay
+  ["Actions"
+   ("5" "Show until next line" review-mode-hide-lines);; :transient t)
+   ("8" "Show until next asterisk" review-mode-show-to-asterisk);; :transient t)
+   ]))
+(define-minor-mode review-mode "Review mode")
+(map! :leader :mode review-mode :desc "begin review display" :n "r" #'review-mode-begin-display)
+
+  ;;(spacemacs/declare-prefix-for-minor-mode 'review-mode "r" "review mode")
+  ;;(spacemacs/set-leader-keys-for-minor-mode 'review-mode "." 'spacemacs/review-mode-transient-state/body)
+(setq review-text-highlights '(
+  ("\#.*\n" . 'header-line)
+  ("\{.*\}" . 'diff-context)
+ ("TODO" . 'diff-error)))
+
+  (define-derived-mode review-text-mode text-mode "review-text"
+    "Major mode for editing my review text format."
+    ;;(display-line-numbers-mode)
+    ;;(setq tab-width 8)
+    (local-set-key (kbd "TAB") 'tab-to-tab-stop)
+    (review-mode)
+    (variable-pitch-mode)
+    (setq indent-tabs-mode t)
+    (setq font-lock-defaults '(review-text-highlights)))
+(map! :leader :mode review-text-mode :desc "insert TAB" :n "TAB" #'tab-to-tab-stop)
+
+(add-hook! org-mode #'variable-pitch-mode #'review-mode)
