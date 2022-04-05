@@ -131,3 +131,6 @@
 (map! :leader :mode review-text-mode :desc "insert TAB" :n "TAB" #'tab-to-tab-stop)
 
 (add-hook! org-mode #'variable-pitch-mode #'review-mode)
+
+(after! transient
+  (map! :map transient-map "?" nil))
