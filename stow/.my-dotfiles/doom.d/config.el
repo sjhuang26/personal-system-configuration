@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+(setq user-full-name "Suhao Jeffrey Huang"
+      user-mail-address "sjhuang26@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -77,63 +77,66 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-(add-hook 'org-mode-hook (lambda () (org-autolist-mode)))
-(setq evil-escape-key-sequence "fd")
-;; https://stackoverflow.com/questions/23677844/emacs-how-to-show-only-the-lines-on-or-before-the-cursor-in-a-file
-  (defun review-mode-hide-lines ()
-    "Helper for review mode that hides lines."
-    (interactive)
-    (widen)
-    (call-interactively 'move-end-of-line)
-    (forward-char)
-    (call-interactively 'move-end-of-line)
-    (narrow-to-region 1 (point)))
 
-  (defun review-mode-show-to-asterisk ()
-    "Show lines until a line beginning with an asterisk is reached."
-    (interactive)
-    (widen)
-    (catch 'loop (while (not (eobp))
-                   (forward-line 1)
-                   (when (string-match "\*.*" (thing-at-point 'line)) (throw 'loop t))))
-    (forward-line 1)
-    (narrow-to-region 1 (point)))
-
-;; aka. define-transient-command
-(after! transient
-(transient-define-prefix review-mode-begin-display ()
-  "Review Mode Display"
-  :transient-suffix 'transient--do-stay
-  :transient-non-suffix 'transient--do-stay
-  ["Actions"
-   ("5" "Show until next line" review-mode-hide-lines);; :transient t)
-   ("8" "Show until next asterisk" review-mode-show-to-asterisk);; :transient t)
-   ])
-(map! :leader :mode review-mode :desc "begin review display" :n "r" #'review-mode-begin-display)
-)
+;; Define my own modes
 (define-minor-mode review-mode "Review mode")
-
-  ;;(spacemacs/declare-prefix-for-minor-mode 'review-mode "r" "review mode")
-  ;;(spacemacs/set-leader-keys-for-minor-mode 'review-mode "." 'spacemacs/review-mode-transient-state/body)
 (setq review-text-highlights '(
-  ("\#.*\n" . 'header-line)
-  ("\{.*\}" . 'diff-context)
- ("TODO" . 'diff-error)))
+                               ("\#.*\n" . 'header-line)
+                               ("\{.*\}" . 'diff-context)
+                               ("TODO" . 'diff-error)))
+(define-derived-mode review-text-mode text-mode "review-text"
+  "Major mode for editing my review text format."
+  ;;(display-line-numbers-mode)
+  ;;(setq tab-width 8)
+  (local-set-key (kbd "TAB") 'tab-to-tab-stop)
+  (review-mode)
+  (setq indent-tabs-mode t)
+  (setq font-lock-defaults '(review-text-highlights)))
 
-(after! mixed-pitch
-  (define-derived-mode review-text-mode text-mode "review-text"
-    "Major mode for editing my review text format."
-    ;;(display-line-numbers-mode)
-    ;;(setq tab-width 8)
-    (local-set-key (kbd "TAB") 'tab-to-tab-stop)
-    (review-mode)
-    ;;(mixed-pitch-mode)
-    (setq indent-tabs-mode t)
-    (setq font-lock-defaults '(review-text-highlights)))
+;; Functions for review-mode
+(defun review-mode-hide-lines ()
+  "Helper for review mode that hides lines."
+  ;; https://stackoverflow.com/questions/23677844/emacs-how-to-show-only-the-lines-on-or-before-the-cursor-in-a-file
+  (interactive)
+  (widen)
+  (call-interactively 'move-end-of-line)
+  (forward-char)
+  (call-interactively 'move-end-of-line)
+  (narrow-to-region 1 (point)))
+(defun review-mode-show-to-asterisk ()
+  "Show lines until a line beginning with an asterisk is reached."
+  (interactive)
+  (widen)
+  (catch 'loop (while (not (eobp))
+                 (forward-line 1)
+                 (when (string-match "\*.*" (thing-at-point 'line)) (throw 'loop t))))
+  (forward-line 1)
+  (narrow-to-region 1 (point)))
+
+;; Transient mode for review-mode
+(use-package! transient
+  :config
+  ;; aka. define-transient-command
+  (transient-define-prefix review-mode-begin-display ()
+    "Review Mode Display"
+    :transient-suffix 'transient--do-stay
+    :transient-non-suffix 'transient--do-stay
+    ["Actions"
+     ("5" "Show until next line" review-mode-hide-lines) ;; :transient t)
+     ("8" "Show until next asterisk" review-mode-show-to-asterisk) ;; :transient t)
+     ])
+  (map! :leader :mode review-mode :desc "begin review display" :n "r" #'review-mode-begin-display)
+  )
+
+;; General configuration
+(setq evil-escape-key-sequence "fd")
+
+;(spacemacs/declare-prefix-for-minor-mode 'review-mode "r" "review mode")
+;;(spacemacs/set-leader-keys-for-minor-mode 'review-mode "." 'spacemacs/review-mode-transient-state/body)
+
+;; Declare all hooks and maps
+(add-hook! org-mode #'mixed-pitch-mode #'review-mode #'org-autolist-mode)
+(add-hook! review-text-mode #'mixed-pitch-mode)
+(map! :map transient-map "?" nil)
 (map! :leader :mode review-text-mode :desc "insert TAB" :n "TAB" #'tab-to-tab-stop)
 (map! :leader :desc "review text mode" :n "R" #'review-text-mode)
-(add-hook! org-mode #'mixed-pitch-mode #'review-mode)
-)
-
-(after! transient
-  (map! :map transient-map "?" nil))
