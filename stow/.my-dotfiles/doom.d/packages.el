@@ -51,3 +51,4 @@
 (package! modus-themes)
 (package! org-autolist)
 (package! hercules)
+(package! mixed-pitch)

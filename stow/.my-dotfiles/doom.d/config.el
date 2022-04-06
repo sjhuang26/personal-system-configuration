@@ -108,9 +108,10 @@
   ["Actions"
    ("5" "Show until next line" review-mode-hide-lines);; :transient t)
    ("8" "Show until next asterisk" review-mode-show-to-asterisk);; :transient t)
-   ]))
-(define-minor-mode review-mode "Review mode")
+   ])
 (map! :leader :mode review-mode :desc "begin review display" :n "r" #'review-mode-begin-display)
+)
+(define-minor-mode review-mode "Review mode")
 
   ;;(spacemacs/declare-prefix-for-minor-mode 'review-mode "r" "review mode")
   ;;(spacemacs/set-leader-keys-for-minor-mode 'review-mode "." 'spacemacs/review-mode-transient-state/body)
@@ -119,18 +120,20 @@
   ("\{.*\}" . 'diff-context)
  ("TODO" . 'diff-error)))
 
+(after! mixed-pitch
   (define-derived-mode review-text-mode text-mode "review-text"
     "Major mode for editing my review text format."
     ;;(display-line-numbers-mode)
     ;;(setq tab-width 8)
     (local-set-key (kbd "TAB") 'tab-to-tab-stop)
     (review-mode)
-    (variable-pitch-mode)
+    ;;(mixed-pitch-mode)
     (setq indent-tabs-mode t)
     (setq font-lock-defaults '(review-text-highlights)))
 (map! :leader :mode review-text-mode :desc "insert TAB" :n "TAB" #'tab-to-tab-stop)
-
-(add-hook! org-mode #'variable-pitch-mode #'review-mode)
+(map! :leader :desc "review text mode" :n "R" #'review-text-mode)
+(add-hook! org-mode #'mixed-pitch-mode #'review-mode)
+)
 
 (after! transient
   (map! :map transient-map "?" nil))
