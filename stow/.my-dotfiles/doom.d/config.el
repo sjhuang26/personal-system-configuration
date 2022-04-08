@@ -33,7 +33,8 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'modus-operandi
-      doom-font (font-spec :family "JetBrainsMono" :size 15 :weight 'normal)
+      ;;doom-font (font-spec :family "JetBrainsMono" :size 15 :weight 'normal)
+      doom-font (font-spec :family "Source Code Pro" :size 15 :weight 'normal)
       doom-variable-pitch-font (font-spec :family "Source Serif Pro" :size 18 :weight 'normal))
       ;;(load-theme 'modus-operandi)
 
