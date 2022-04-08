@@ -10,15 +10,17 @@ function maintain_my_computer
             and git pull
         case r
             cd ~/r/personal_notes
-            and git add -A; and git status
+            and git add -A
+            and git status
             and read_confirm
-            and git commit -m w
+            and git commit -m "Work"
             and git push
         case s
             cd ~/r/personal-system-configuration/
-            and git add -A; and git status
+            and git add -A
+            and git status
             and read_confirm
-            and git commit -m w
+            and git commit -m "Work"
             and git push
         case bc
             bluetoothctl connect 00:02:5B:04:7B:30
@@ -49,7 +51,7 @@ function maintain_my_computer
             pkill steam
             pkill itch
             pkill zoom
-        case setup_everything
+        case setup_everything_do_not_run
             echo 'This is only intended for use for new computers.'
             echo 'Do not run it directly. Copy and paste each line.'
             return
