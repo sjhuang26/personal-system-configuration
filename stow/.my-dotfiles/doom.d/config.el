@@ -33,8 +33,8 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'modus-operandi
-      doom-font (font-spec :family "JetBrainsMono" :size 15 :weight 'light)
-      doom-variable-pitch-font (font-spec :family "Mignon" :size 18 :weight 'light))
+      doom-font (font-spec :family "JetBrainsMono" :size 15 :weight 'normal)
+      doom-variable-pitch-font (font-spec :family "Source Serif Pro" :size 18 :weight 'normal))
       ;;(load-theme 'modus-operandi)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -123,10 +123,10 @@
     :transient-non-suffix 'transient--do-stay
     ["Actions"
      ("5" "Show until next line" review-mode-hide-lines) ;; :transient t)
-     ("8" "Show until next asterisk" review-mode-show-to-asterisk) ;; :transient t)
-     ])
-  (map! :leader :mode review-mode :desc "begin review display" :n "r" #'review-mode-begin-display)
-  )
+     ("8" "Show until next asterisk" review-mode-show-to-asterisk)]) ;; :transient t)
+     
+  (map! :leader :mode review-mode :desc "begin review display" :n "r" #'review-mode-begin-display))
+  
 
 ;; General configuration
 (setq evil-escape-key-sequence "fd")
