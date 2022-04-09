@@ -33,6 +33,8 @@ function maintain_my_computer
             and echo $opera_fontconfig
             and read_confirm
             and rm -vIr $opera_fontconfig
+        case opera-snap-fonts
+            ln -s ~/.local/share/fonts ~/snap/opera/current/.local/share/fonts
         case g
             rclone mount g:/ ~/g &
         case b
