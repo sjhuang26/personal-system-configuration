@@ -141,3 +141,5 @@
 (map! :map transient-map "?" nil)
 (map! :leader :mode review-text-mode :desc "insert TAB" :n "TAB" #'tab-to-tab-stop)
 (map! :leader :desc "review text mode" :n "R" #'review-text-mode)
+(map! :leader :desc "Insert TAB" "`" #'tab-to-tab-stop)
+(map! :leader :desc "Switch to last buffer" "TAB" #'evil-switch-to-windows-last-buffer)

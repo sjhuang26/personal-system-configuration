@@ -7,6 +7,7 @@ This is my personal configuration for my computers.
 - Uses the GNU stow library
 - Doom Emacs configuration
   - "Review mode" for incrementally showing lines of a file, useful for active recall learning
+- old Spacemacs configuration
 
 ## Future ideas
 
@@ -20,4 +21,5 @@ This is my personal configuration for my computers.
 - hotkeys for adding tags to list items
 - automatic adding of newlines to the end of files
 - undo tree
+- consider going back to Spacemacs
 
