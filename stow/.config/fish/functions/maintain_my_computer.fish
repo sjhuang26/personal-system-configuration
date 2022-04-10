@@ -72,7 +72,7 @@ function maintain_my_computer
             and curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
             and curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
             and echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-            and sudo apt install stow spotify-client
+            and sudo apt install stow spotify-client trash-cli nethogs
             and sudo snap install emacs opera
             and sudo chmod a+wr /usr/bin/spotify
             and sudo chmod a+wr /usr/share/spotify
@@ -83,5 +83,9 @@ function maintain_my_computer
             bup -d ~/b/sjhuang26-main/bup/ save ~/cloud/ -n sjhuang26-main -vv
         case src
             functions maintain_my_computer
+        case edit
+            nano ~/.config/fish/functions/maintain_my_computer.fish
+        case chsh
+            chsh -s "/usr/bin/fish"
     end
 end
