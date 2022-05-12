@@ -40,7 +40,7 @@ function maintain_my_computer
         case b
             rclone mount b:/ ~/b --vfs-cache-mode minimal &
         case gs
-            rclone sync -i g:/ ~/cloud/g-sjhuang26/
+            rclone sync -P g:/ ~/cloud/g-sjhuang26/
         case gu
             umount ~/g
         case bu

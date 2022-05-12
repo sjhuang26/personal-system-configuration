@@ -135,6 +135,7 @@
       (append +lookup-provider-url-alist '(
                                            ("Bible Gateway" "https://www.biblegateway.com/passage/?search=%s&version=CSB")
                                            ("Genius" "https://genius.com/search?q=%s"))))
+(setq +workspaces-on-switch-project-behavior nil)
 
 ;(spacemacs/declare-prefix-for-minor-mode 'review-mode "r" "review mode")
 ;;(spacemacs/set-leader-keys-for-minor-mode 'review-mode "." 'spacemacs/review-mode-transient-state/body)
