@@ -171,7 +171,17 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
-    ]
+        # Set Plasma dialogs and pop ups as floating so they won't get tiled
+        Match(role="pop-up"),
+        Match(role="task_dialog"),
+        Match(wm_class="systemsettings"),
+        Match(wm_class="plasmashell"),
+        Match(wm_class="Plasma"),
+        Match(title="plasma-desktop"),
+        Match(wm_class="krunner"),
+        Match(wm_class="Kmix"),
+        Match(wm_class="Klipper"),
+        Match(wm_class="Plasmoidviewer")]
 )
 auto_fullscreen = True
 focus_on_window_activation = "smart"

@@ -34,7 +34,7 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'modus-operandi
       ;;doom-font (font-spec :family "JetBrainsMono" :size 15 :weight 'normal)
-      doom-font (font-spec :family "Source Code Pro" :size 15 :weight 'normal)
+      doom-font (font-spec :family "Go Mono" :size 15 :weight 'normal)
       doom-variable-pitch-font (font-spec :family "Source Serif Pro" :size 18 :weight 'normal))
       ;;(load-theme 'modus-operandi)
 
@@ -79,6 +79,23 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+
+;; Theming
+(setq modus-themes-bold-constructs t)
+(setq modus-themes-italic-constructs t)
+(setq modus-themes-syntax '(faint alt-syntax))
+(setq modus-themes-mode-line '((padding 4) accented borderless))
+(setq modus-themes-completions
+      '((matches . (extrabold intense))
+        (selection . (extrabold intense))
+        (popup . (extrabold intense))))
+;; (set-face-attribute 'mode-line nil :underline nil)
+
+
+;; Font utilities
+(defun fix-line-numbers ()
+  (interactive)
+  (set-face-font 'line-number doom-font))
 ;; Define my own modes
 (define-minor-mode review-mode "Review mode")
 (setq review-text-highlights '(
@@ -136,6 +153,7 @@
                                            ("Bible Gateway" "https://www.biblegateway.com/passage/?search=%s&version=CSB")
                                            ("Genius" "https://genius.com/search?q=%s"))))
 (setq +workspaces-on-switch-project-behavior nil)
+(setq org-cycle-include-plain-lists 'integrate)
 
 ;(spacemacs/declare-prefix-for-minor-mode 'review-mode "r" "review mode")
 ;;(spacemacs/set-leader-keys-for-minor-mode 'review-mode "." 'spacemacs/review-mode-transient-state/body)
@@ -143,8 +161,18 @@
 ;; Declare all hooks and maps
 (add-hook! org-mode #'mixed-pitch-mode #'review-mode #'org-autolist-mode)
 (add-hook! review-text-mode #'mixed-pitch-mode)
+(add-hook! typescript-tsx-mode #'variable-pitch-mode #'fix-line-numbers)
+(add-hook! typescript-mode #'variable-pitch-mode #'fix-line-numbers)
+(add-hook! markdown-mode #'variable-pitch-mode #'fix-line-numbers)
 (map! :map transient-map "?" nil)
-(map! :leader :mode review-text-mode :desc "insert TAB" :n "TAB" #'tab-to-tab-stop)
+;; (map! :leader :mode review-text-mode :desc "insert TAB" :n "TAB" #'tab-to-tab-stop)
 (map! :leader :desc "review text mode" :n "R" #'review-text-mode)
-(map! :leader :desc "Insert TAB" "`" #'tab-to-tab-stop)
-(map! :leader :desc "Switch to last buffer" "TAB" #'evil-switch-to-windows-last-buffer)
+;; (map! :leader :desc "Insert TAB" "`" #'tab-to-tab-stop)
+;; (map! :leader :desc "Switch to last buffer" "TAB" #'evil-switch-to-windows-last-buffer)
+(setq typescript-indent-level 2)
+
+;; test
+;; (setq popup-use-optimized-column-computation nil)
+
+;; Copy and paste
+(map! :leader :map doom-leader-workspace-map :n "TAB")
