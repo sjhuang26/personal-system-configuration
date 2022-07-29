@@ -79,6 +79,9 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; LSP
+(setq lsp-ui-sideline-delay 0)
+(map! :leader :desc "show LSP menu" :n "c m" #'lsp-ui-imenu)
 
 ;; Theming
 (setq modus-themes-bold-constructs t)
