@@ -31,8 +31,10 @@ function maintain_my_computer
             set opera_fontconfig (find ~/snap/opera -name 'fontconfig')
             and echo 'These directories will be removed'
             and echo $opera_fontconfig
+            and echo '/var/snap/opera/common/fontconfig/'
             and read_confirm
             and rm -vIr $opera_fontconfig
+            and sudo trash /var/snap/opera/common/fontconfig/
         case opera-snap-fonts
             ln -s ~/.local/share/fonts ~/snap/opera/current/.local/share/fonts
         case g
@@ -87,5 +89,18 @@ function maintain_my_computer
             nano ~/.config/fish/functions/maintain_my_computer.fish
         case chsh
             chsh -s "/usr/bin/fish"
+        case bluetoothfix
+            sudo rfkill block bluetooth
+            sudo rfkill unblock bluetooth
+            sudo systemctl restart bluetooth
+        case randomgsettingsfix
+            sudo apt install --reinstall gsettings-desktop-schemas
+        case bs
+            rclone sync ~/cloud b:sjhuang26-main-v2 -P
+        case cool
+            buckle -g 36 &
+            cool-retro-term -p Futuristic &
+        case coolstop
+            pkill buckle
     end
 end

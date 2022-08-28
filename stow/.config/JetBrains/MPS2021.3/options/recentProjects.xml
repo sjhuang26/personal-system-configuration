@@ -1,0 +1,20 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/MPSProjects/Project">
+          <value>
+            <RecentProjectMetaInfo frameTitle="Concept1_Editor" opened="true" projectWorkspaceId="2De6I0qMJVxGCQOF8b0lG5pIoCY">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="MPS-213.7172.958" />
+              <option name="buildTimestamp" value="1651190453687" />
+              <frame x="260" y="24" width="1400" height="1000" />
+              <option name="productionCode" value="MPS" />
+              <option name="projectOpenTimestamp" value="1661047120004" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</application>

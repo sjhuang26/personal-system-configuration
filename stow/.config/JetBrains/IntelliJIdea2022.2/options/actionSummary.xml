@@ -1,0 +1,13 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="ShowSettings">
+      <i c="1" l="1661651602831" />
+    </e>
+    <e n="WelcomeScreen.OpenProject">
+      <i c="1" l="1661651582362" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.EmptyAction$MyDelegatingAction">
+      <i c="1" l="1661651608939" />
+    </e>
+  </component>
+</application>

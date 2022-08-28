@@ -1,0 +1,26 @@
+<application>
+  <component name="DynamicPluginEnabler">
+    <trackers>
+      <map>
+        <entry key="2De6I0qMJVxGCQOF8b0lG5pIoCY">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+      </map>
+    </trackers>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="NonModalCommitCustomization.IsApplied" value="true" />
+    <property name="appcds.runOnSecondStart" value="MPS-213.7172.958-6be9b036b30a88c921f929417542583a52b8e8f5f3ab1bf8f9debb08272c9f83" />
+    <property name="ask.about.ctrl.y.shortcut.v2" value="true" />
+    <property name="bundled.plugins.list.saved.version" value="MPS-213.7172.958" />
+    <property name="default.storage.format" value=".mps (directory based)" />
+    <property name="file.gist.reindex.count" value="10" />
+    <property name="fileTypeChangedCounter" value="1" />
+    <property name="fileTypeDetectors" value="com.intellij.ide.scratch.ScratchFileServiceImpl$Detector" />
+    <property name="input.method.disabler.muted" value="true" />
+    <property name="registry.to.advanced.settings.migration.build" value="MPS-213.7172.958" />
+    <property name="tasks.pass.word.conversion.enforced" value="true" />
+  </component>
+</application>
