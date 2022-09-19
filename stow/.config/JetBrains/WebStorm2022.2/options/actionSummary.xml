@@ -1,0 +1,112 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$SelectAll">
+      <i c="9" l="1661794233821" />
+    </e>
+    <e n="$Undo">
+      <i c="13" l="1661793010494" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="24" l="1661826969826" />
+    </e>
+    <e n="EditorChooseLookupItem">
+      <i c="1" l="1661793707575" />
+    </e>
+    <e n="EditorDeleteToWordStart">
+      <i c="5" l="1661793753993" />
+    </e>
+    <e n="EditorDown">
+      <i c="40" l="1661754371461" />
+    </e>
+    <e n="EditorEnter">
+      <i c="3" l="1661794168709" />
+    </e>
+    <e n="EditorLeft">
+      <i c="14" l="1661754358695" />
+    </e>
+    <e n="EditorNextWord">
+      <i c="4" l="1661754360161" />
+    </e>
+    <e n="EditorPreviousWord">
+      <i c="3" l="1661754359198" />
+    </e>
+    <e n="EditorRight">
+      <i c="20" l="1661754355303" />
+    </e>
+    <e n="EditorUp">
+      <i c="21" l="1661754367448" />
+    </e>
+    <e n="FindInPath">
+      <i c="2" l="1661793747856" />
+    </e>
+    <e n="GotoAction">
+      <i c="7" l="1661794218389" />
+    </e>
+    <e n="GotoDeclaration">
+      <i c="1" l="1661793876625" />
+    </e>
+    <e n="GotoFile">
+      <i c="2" l="1661793415265" />
+    </e>
+    <e n="GotoImplementation">
+      <i c="1" l="1661793832459" />
+    </e>
+    <e n="Help.KeymapReference">
+      <i c="1" d="1" l="1661793639301" k="1661793639301" />
+    </e>
+    <e n="NextTemplateVariable">
+      <i c="2" l="1661793717360" />
+    </e>
+    <e n="PrettierImportCodeStyleAction">
+      <i c="1" l="1661793365327" />
+    </e>
+    <e n="ShowIntentionActions">
+      <i c="31" l="1661793919549" />
+    </e>
+    <e n="ShowSettings">
+      <i c="6" l="1661793483711" />
+    </e>
+    <e n="WelcomeScreen.OpenDirectoryProject">
+      <i c="1" l="1661754185524" />
+    </e>
+    <e n="WelcomeScreen.Plugins">
+      <i c="1" d="1" l="1661794219569" k="1661794219569" />
+    </e>
+    <e n="com.intellij.application.options.schemes.AbstractSchemesPanel$ShowSchemesActionsListAction">
+      <i c="1" l="1661793197562" />
+    </e>
+    <e n="com.intellij.codeInsight.daemon.NavigateAction">
+      <i c="3" l="1661793893305" />
+    </e>
+    <e n="com.intellij.javascript.nodejs.interpreter.NodeJsInterpretersDialog$AddInterpreterTypeAction">
+      <i c="1" l="1661792989527" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.EmptyAction$MyDelegatingAction">
+      <i c="38" l="1661827006807" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="10" l="1661793900889" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="8" l="1661794219566" />
+    </e>
+    <e n="com.intellij.openapi.ui.DialogWrapper$4">
+      <i c="4" l="1661827160215" />
+    </e>
+    <e n="com.intellij.ui.ScrollingUtil$ListMoveDownAction">
+      <i c="2" l="1661754242370" />
+    </e>
+    <e n="com.intellij.ui.ScrollingUtil$ListMoveUpAction">
+      <i c="2" l="1661754242561" />
+    </e>
+    <e n="com.maddyhome.idea.vim.group.NotificationService$OpenIdeaVimRcAction">
+      <i c="1" l="1661793908346" />
+    </e>
+    <e n="com.maddyhome.idea.vim.ui.ShortcutConflictsSettings">
+      <i c="1" l="1661793913110" />
+    </e>
+    <e n="com.maddyhome.idea.vim.ui.ex.ExShortcutKeyAction">
+      <i c="1" l="1661793183303" />
+    </e>
+  </component>
+</application>

@@ -1,0 +1,126 @@
+<application>
+  <component name="VimHistorySettings">
+    <history>
+      <history-search />
+      <history-cmd>
+        <entry encoding="base64">c291cmNl</entry>
+        <entry encoding="base64">aGVscA==</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+  </component>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <filemarks>
+      <file name="$USER_HOME$/r/cs2110/a2/src/a2/Student.java" timestamp="1663298974155">
+        <mark key="[" line="35" column="17" />
+        <mark key="]" line="36" column="19" />
+        <mark key="^" line="36" column="19" />
+        <mark key="." line="36" column="18" />
+      </file>
+      <file name="/Dummy.txt" timestamp="1663299086014">
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="0" column="10" />
+        <mark key="^" line="0" column="10" />
+        <mark key="." line="0" column="9" />
+      </file>
+      <file name="$USER_HOME$/r/cs2110/tests/test-script-2.txt" timestamp="1663297732018">
+        <mark key="[" line="8" column="0" />
+        <mark key="]" line="8" column="4" />
+        <mark key="^" line="8" column="4" />
+        <mark key="." line="8" column="3" />
+      </file>
+      <file name="$USER_HOME$/r/cs2110/a2/src/a2/Course.java" timestamp="1663299036866">
+        <mark key="[" line="130" column="16" />
+        <mark key="]" line="131" column="23" />
+        <mark key="^" line="131" column="23" />
+        <mark key="." line="131" column="22" />
+      </file>
+      <file name="$USER_HOME$/r/cs2110/a1/src/A1.java" timestamp="1663297089705">
+        <mark key="[" line="40" column="65" />
+        <mark key="]" line="40" column="68" />
+        <mark key="." line="40" column="67" />
+        <mark key="^" line="40" column="68" />
+      </file>
+      <file name="/fragment.java" timestamp="1663299048854">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="/" timestamp="1663299134087">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/r/cs2110/a2/src/a2/A2Test.java" timestamp="1663296939673">
+        <mark key="a" line="8" column="10" />
+        <mark key="b" line="35" column="30" />
+        <mark key="j" line="8" column="10" />
+        <mark key="k" line="8" column="9" />
+        <mark key="[" line="25" column="0" />
+        <mark key="]" line="25" column="45" />
+        <mark key="." line="23" column="35" />
+        <mark key="^" line="23" column="36" />
+      </file>
+      <file name="$USER_HOME$/r/cs2110/a2/src/a2/StudentList.java" timestamp="1663298948525">
+        <mark key="[" line="111" column="17" />
+        <mark key="]" line="112" column="27" />
+        <mark key="." line="112" column="26" />
+        <mark key="^" line="112" column="27" />
+      </file>
+    </filemarks>
+    <jumps />
+  </component>
+  <component name="VimRegisterSettings">
+    <registers>
+      <register name="&quot;" type="2">
+        <text encoding="base64">CQljbGFzc0ludigpOwo=</text>
+      </register>
+      <register name="*" type="2">
+        <text encoding="base64">CQljbGFzc0ludigpOwo=</text>
+      </register>
+      <register name="-" type="4">
+        <text encoding="base64">MA==</text>
+      </register>
+      <register name="." type="4">
+        <text encoding="base64">CWNsYXNzSW52KCk7</text>
+      </register>
+      <register name="0" type="2">
+        <text encoding="base64">CQljaGVja0xlY3R1cmVUaW1lKDEyLCA1OSwgIjEyOjU5IFBNIik7Cg==</text>
+      </register>
+      <register name="1" type="2">
+        <text encoding="base64">CQljbGFzc0ludigpOwo=</text>
+      </register>
+      <register name="2" type="2">
+        <text encoding="base64">CQo=</text>
+      </register>
+      <register name="3" type="2">
+        <text encoding="base64">CQkJLy8gVE9ETzogdXNlID09ID8K</text>
+      </register>
+      <register name="4" type="2">
+        <text encoding="base64">CQkJLy8gVE9ETzogdXNlID09ID8K</text>
+      </register>
+      <register name="5" type="2">
+        <text encoding="base64">c3R1ZGVudHMKY291cnNlcwplbnJvbGxtZW50IDAK</text>
+      </register>
+      <register name="6" type="2">
+        <text encoding="base64">c3R1ZGVudHMKY291cnNlcwplbnJvbGxtZW50IDAK</text>
+      </register>
+      <register name="7" type="2">
+        <text encoding="base64">CQkK</text>
+      </register>
+      <register name="8" type="2">
+        <text encoding="base64">CQljaGVja0xlY3R1cmVUaW1lKDEsIDAsICIxOjAwIEFNIik7CgkJY2hlY2tMZWN0dXJlVGltZSgxLCAwLCAiMTowMCBBTSIpOwoJCWNoZWNrTGVjdHVyZVRpbWUoMSwgMCwgIjE6MDAgQU0iKTsK</text>
+      </register>
+      <register name="9" type="2">
+        <text encoding="base64">CQljaGVja0xlY3R1cmVUaW1lKDEsIDAsICIxOjAwIEFNIik7Cg==</text>
+      </register>
+      <register name=":" type="4">
+        <text encoding="base64">aGVscA==</text>
+      </register>
+    </registers>
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-dir encoding="base64">MQ==</last-dir>
+      <show-last encoding="base64">dHJ1ZQ==</show-last>
+    </search>
+  </component>
+</application>

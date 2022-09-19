@@ -4,12 +4,12 @@
       <map>
         <entry key="$USER_HOME$/r/cs2110">
           <value>
-            <RecentProjectMetaInfo frameTitle="cs2110 – README.md" opened="true" projectWorkspaceId="2DxrUqkztRaoYOIArXVSHxkmtlq">
-              <option name="activationTimestamp" value="1661651949640" />
+            <RecentProjectMetaInfo frameTitle="cs2110 – Course.java" opened="true" projectWorkspaceId="2DxrUqkztRaoYOIArXVSHxkmtlq">
+              <option name="activationTimestamp" value="1663299403664" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
               <option name="build" value="IU-222.3739.54" />
               <option name="buildTimestamp" value="1660626117821" />
-              <frame x="0" y="0" width="1920" height="1044" extendedState="6" />
+              <frame x="0" y="0" width="1440" height="1044" />
               <option name="productionCode" value="IU" />
               <option name="projectOpenTimestamp" value="1661651595105" />
             </RecentProjectMetaInfo>

@@ -1,4 +1,49 @@
 <application>
+  <component name="AppInspectionProfilesVisibleTreeState">
+    <entry key="Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Android</id>
+          </State>
+          <State>
+            <id>Code style issuesJava</id>
+          </State>
+          <State>
+            <id>CorrectnessLintAndroid</id>
+          </State>
+          <State>
+            <id>Declaration redundancyJava</id>
+          </State>
+          <State>
+            <id>EncapsulationJava</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>LintAndroid</id>
+          </State>
+          <State>
+            <id>Quarkus</id>
+          </State>
+          <State>
+            <id>Threading issuesGroovy</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="CodeStyleSchemesUIConfiguration">
+    <option name="RECENT_IMPORT_FILE_LOCATION" value="file:$USER_HOME$/Downloads/CS2112_IntelliJ_Format.xml" />
+  </component>
   <component name="DynamicPluginEnabler">
     <trackers>
       <map>
@@ -13,30 +58,42 @@
   <component name="PropertyService"><![CDATA[{
   "keyToString": {
     "CWM_LOGGING_VERSION": "1",
+    "INSPECTION_FILTER_HISTORY": "access modifier",
+    "InstalledPluginsSearchHistory": "ideavim\nscheme\nsche",
+    "LayoutCode.optimizeImports": "false",
+    "LayoutCode.processChangedText": "false",
+    "LayoutCode.rearrangeEntriesJava": "false",
+    "MarketplacePluginsSearchHistory": "ideavim",
     "NonModalCommitCustomization.IsApplied": "true",
+    "PluginConfigurable.selectionTab": "1",
     "RunOnceActivity.se.text.search": "true",
-    "SettingsSearchHistory": "format",
-    "appcds.runOnSecondStart": "IU-222.3739.54-0176db553d48687f9df8f04ce33af810bbee88a2579433120b0964eac75618b4",
+    "SettingsSearchHistory": "ideavim\nscheme\nformat",
+    "appcds.runOnSecondStart": "IU-222.3739.54-ff32df93234cb42e77359b34c015a13e96280694444546402e42248081d9186e",
     "ask.about.ctrl.y.shortcut.v2": "true",
+    "build.toolwindow.Build Output.selection.state": "com.intellij.build.BuildTreeConsoleView",
     "bundled.plugins.list.saved.version": "IU-222.3739.54",
+    "defaultJdkConfigured": "true",
     "eclipse.projects.detected": "",
     "evlsprt3.222": "22",
     "fileTypeChangedCounter": "1",
-    "fontSizeToResetConsole": "13.0",
-    "fontSizeToResetEditor": "13.0",
+    "fontSizeToResetConsole": "16.0",
+    "fontSizeToResetEditor": "16.0",
+    "got.it.tooltip.reader.mode.got.it": "1",
     "gotit.previous.run": "IU-222.3739.54",
     "ide.memory.adjusted": "true",
+    "ideavim.statistics.timestamp": "1663294802213",
     "input.method.disabler.muted": "true",
     "installed.kotlin.plugin.version": "222-1.7.10-release-334-IJ3739.54",
-    "last_opened_file_path": "/home/jeff/r/cs2110",
+    "last_opened_file_path": "/home/jeff/Downloads/CS2112_IntelliJ_Format.xml",
     "previousColorScheme": "_@user_Darcula",
     "registry.to.advanced.settings.migration.build": "IU-222.3739.54",
-    "settings.code.style.selected.tab.JAVA": "JavaDoc",
+    "settings.code.style.selected.tab.JAVA": "Wrapping and Braces",
     "tasks.pass.word.conversion.enforced": "true",
     "ts.lib.d.ts.version": "4.7.4"
   },
   "keyToStringList": {
     "file.chooser.recent.files": [
+      "/home/jeff/Downloads/CS2112_IntelliJ_Format.xml",
       "/home/jeff/r/cs2110"
     ],
     "fileTypeDetectors": [

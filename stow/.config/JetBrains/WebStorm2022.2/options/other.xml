@@ -1,20 +1,46 @@
 <application>
+  <component name="DynamicPluginEnabler">
+    <trackers>
+      <map>
+        <entry key="2E1DTF8MQjeOb9I9Zp3REVbdfJ3">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+      </map>
+    </trackers>
+  </component>
   <component name="PropertyService"><![CDATA[{
   "keyToString": {
     "CWM_LOGGING_VERSION": "1",
     "GeneralSettings.initiallyConfigured": "true",
+    "MarketplacePluginsSearchHistory": "idea which-key\nwhich key\nideav\nideavim\nidevim",
     "NonModalCommitCustomization.IsApplied": "true",
+    "RunOnceActivity.se.text.search": "true",
+    "SettingsSearchHistory": "plugin",
+    "appcds.runOnSecondStart": "WS-222.3739.57-b050c8a56fc853ce0f53a6c242ed4b0099ddc7dfb35e03a0ad014bd28cb103ea",
     "ask.about.ctrl.y.shortcut.v2": "true",
     "bundled.plugins.list.saved.version": "WS-222.3739.57",
     "evlsprt3.222": "23",
+    "file.gist.reindex.count": "1",
     "fileTypeChangedCounter": "1",
-    "fontSizeToResetConsole": "13.0",
-    "fontSizeToResetEditor": "13.0",
+    "fontSizeToResetConsole": "16.0",
+    "fontSizeToResetEditor": "16.0",
+    "got.it.tooltip.reader.mode.got.it": "1",
+    "ide.memory.adjusted": "true",
+    "ideavim.statistics.timestamp": "1661793355065",
     "input.method.disabler.muted": "true",
-    "previousColorScheme": "_@user_Darcula",
-    "tasks.pass.word.conversion.enforced": "true"
+    "last_opened_file_path": "/home/jeff/r/citystep",
+    "previousColorScheme": "_@user_Default",
+    "registry.to.advanced.settings.migration.build": "WS-222.3739.57",
+    "tasks.pass.word.conversion.enforced": "true",
+    "ts.lib.d.ts.version": "4.7.4"
   },
   "keyToStringList": {
+    "file.chooser.recent.files": [
+      "/home/jeff/.local/share/nvm/v16.14.2/bin/node",
+      "/home/jeff/r/citystep"
+    ],
     "fileTypeDetectors": [
       "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
       "com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector",

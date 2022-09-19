@@ -1,0 +1,55 @@
+<application>
+  <component name="VimHistorySettings">
+    <history>
+      <history-search />
+    </history>
+  </component>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <filemarks>
+      <file name="$USER_HOME$/r/citystep/app/components/AppBody.tsx" timestamp="1661793175985">
+        <mark key="[" line="10" column="13" />
+        <mark key="]" line="10" column="13" />
+        <mark key="^" line="10" column="13" />
+        <mark key="." line="10" column="12" />
+      </file>
+      <file name="$USER_HOME$/.config/ideavim/ideavimrc" timestamp="1661827028016">
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="0" column="0" />
+        <mark key="." line="0" column="0" />
+        <mark key="^" line="12" column="22" />
+      </file>
+      <file name="$USER_HOME$/r/citystep/app/components/ActivityList.tsx" timestamp="1661793709190">
+        <mark key="]" line="52" column="9" />
+        <mark key="^" line="52" column="9" />
+        <mark key="." line="52" column="8" />
+      </file>
+      <file name="/" timestamp="1661793483978">
+        <mark key="[" line="0" column="0" />
+      </file>
+    </filemarks>
+    <jumps />
+  </component>
+  <component name="VimRegisterSettings">
+    <registers>
+      <register name="1" type="2">
+        <text encoding="base64">bGV0IG1hcGxlYWRlcj0iICIK</text>
+      </register>
+      <register name="&quot;" type="2">
+        <text encoding="base64">bGV0IG1hcGxlYWRlcj0iICIK</text>
+      </register>
+      <register name="-" type="4">
+        <text encoding="base64">Ig==</text>
+      </register>
+      <register name="." type="4">
+        <text encoding="base64">Lm15LWRvdGZpbGVzLw==</text>
+      </register>
+    </registers>
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-dir encoding="base64">MQ==</last-dir>
+      <show-last encoding="base64">ZmFsc2U=</show-last>
+    </search>
+  </component>
+</application>

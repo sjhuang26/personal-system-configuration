@@ -35,7 +35,8 @@
 (setq doom-theme 'modus-operandi
       ;;doom-font (font-spec :family "JetBrainsMono" :size 15 :weight 'normal)
       doom-font (font-spec :family "Go Mono" :size 15 :weight 'normal)
-      doom-variable-pitch-font (font-spec :family "Source Serif Pro" :size 18 :weight 'normal))
+      ;;doom-variable-pitch-font (font-spec :family "Source Serif Pro" :size 18 :weight 'normal))
+      doom-variable-pitch-font (font-spec :family "Atkinson Hyperlegible" :size 18 :weight 'normal))
       ;;(load-theme 'modus-operandi)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -98,7 +99,8 @@
 ;; Font utilities
 (defun fix-line-numbers ()
   (interactive)
-  (set-face-font 'line-number doom-font))
+  (set-face-font 'line-number doom-font)
+  (set-face-font 'line-number-current-line doom-font))
 ;; Define my own modes
 (define-minor-mode review-mode "Review mode")
 (setq review-text-highlights '(
@@ -167,6 +169,7 @@
 (add-hook! typescript-tsx-mode #'variable-pitch-mode #'fix-line-numbers)
 (add-hook! typescript-mode #'variable-pitch-mode #'fix-line-numbers)
 (add-hook! markdown-mode #'variable-pitch-mode #'fix-line-numbers)
+(add-hook! tuareg-mode #'variable-pitch-mode #'fix-line-numbers)
 (map! :map transient-map "?" nil)
 ;; (map! :leader :mode review-text-mode :desc "insert TAB" :n "TAB" #'tab-to-tab-stop)
 (map! :leader :desc "review text mode" :n "R" #'review-text-mode)

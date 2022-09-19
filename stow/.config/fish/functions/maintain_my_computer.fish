@@ -15,6 +15,7 @@ function maintain_my_computer
             and read_confirm
             and git commit -m "Work"
             and git push
+            and git push origin-mirror
         case s
             cd ~/r/personal-system-configuration/
             and git add -A
@@ -41,12 +42,18 @@ function maintain_my_computer
             rclone mount g:/ ~/g &
         case b
             rclone mount b:/ ~/b --vfs-cache-mode minimal &
+        case d
+            rclone mount d:/ ~/d &
         case gs
             rclone sync -P g:/ ~/cloud/g-sjhuang26/
+        case ds
+            rclone sync -P d:/ ~/cloud/d-sjhuang26/
         case gu
             umount ~/g
         case bu
             umount ~/b
+        case du
+            umount ~/d
         case bupi
             bup -d ~/b/sjhuang26-main/bup/ index ~/cloud/
         case gdedup
@@ -102,5 +109,11 @@ function maintain_my_computer
             cool-retro-term -p Futuristic &
         case coolstop
             pkill buckle
+        case kdesave
+            cd ~
+            and konsave -e main
+            and 7z x main.knsv -or/private-personal-system-configuration/kde
+        case phonesync
+            rclone bisync d:/samsung-a11/Obsidian/Main/ ~/r/personal_notes/Obsidian/ --resync --exclude="/.obsidian/**" -P
     end
 end
